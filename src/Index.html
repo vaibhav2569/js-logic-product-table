@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js logic and product table</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <script src="./JS/script.js"></script>
+  </head>
+  <body>
+    <form onsubmit="return create()">
+      <label for="">Product id</label>
+      <input id="p_id" type="number" /> <br /><br />
+      <label for="">Product Name</label>
+      <input id="p_name" type="text" /> <br /><br />
+      <label for="">Product Price</label>
+      <input id="p_price" type="number" /> <br /><br /><br />
+      <input  class="form__inp__submit" type="submit" value="Add products" />
+    </form>
+    <p id="message"></p>
+    <div>
+      <table id="table">
+        
+          <tr>
+            <th>Product id</th>
+            <th>Product name</th>
+            <th>Product price</th>
+          </tr>
+        
+      </table>
+    </div>
+  </body>
+</html>
