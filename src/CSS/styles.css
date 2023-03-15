@@ -1,10 +1,12 @@
 body{
     padding: 40px;
 }
+/* table */
 #table{
     margin-top: 10px;
     padding: 30px;
 }
+/* table header */
 th{
     padding-right: 180px;
     font-weight: lighter;
@@ -12,6 +14,7 @@ th{
     /* border: 2px black solid; */ 
     
 }
+/* table data */
 td{
     padding-right: 10px;
 }
@@ -20,14 +23,17 @@ td{
     border: black 2px solid;
     background-color: white;
 }
+/* for id  */
 #p_id{
     margin-left: 70px;
     padding: 5px 0px;
 }
+/* for product name */
 #p_name{
     margin-left: 43px;
     padding: 5px 0px;
 }
+/* for product pricing */
 #p_price{
     margin-left: 48px;
     padding: 5px 0px;

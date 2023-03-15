@@ -4,22 +4,24 @@ function create(){
     let id=document.getElementById("p_id").value;
     let name=document.getElementById("p_name").value;
     let price=document.getElementById("p_price").value;
-    var correct=/^[A-Za-z]+$/;
+    let correct=/^[A-Za-z]+$/;
     arr.push({id:id,name:name,price:"USD"+price});
     // if any input field is empty
     if(id==""||name=="" ||price=="")
     {
         message="please fill all input fields";
     }
+    // if id or price is negative
     else if(id<0 ||price<0)
     {
         message="Please enter valid input";
     }
+    // name validation 
     else if(!(name.match(correct)))
     {
           message="Special Characters are not allowed";
     }
-    
+    // if message is blank it means no error
     if(message=="")
     {
         const table=document.getElementById("table");
@@ -35,6 +37,7 @@ function create(){
         row.append(data3);
         table.append(row);
     }
+    // if error
     else{
         document.getElementById("message").innerHTML=message;
         document.getElementById("message").style.color="red";
