@@ -4,6 +4,7 @@ function create(){
     let id=document.getElementById("p_id").value;
     let name=document.getElementById("p_name").value;
     let price=document.getElementById("p_price").value;
+    var correct=/^[A-Za-z]+$/;
     arr.push({id:id,name:name,price:"USD"+price});
     // if any input field is empty
     if(id==""||name=="" ||price=="")
@@ -14,7 +15,7 @@ function create(){
     {
         message="Please enter valid input";
     }
-    else if(!((name>="a" &&name<="z")||(name>="A" &&name<="Z") ||(name>="A" &&name<="Z")))
+    else if(!(name.match(correct)))
     {
           message="Special Characters are not allowed";
     }
