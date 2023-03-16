@@ -10,28 +10,26 @@
   </head>
   <body>
     <!-- form -->
-    <form onsubmit="return create()">
+    <form >
       <label for="">Product id</label>
       <input id="p_id" type="number" /> <br /><br />
       <label for="">Product Name</label>
       <input id="p_name" type="text" /> <br /><br />
       <label for="">Product Price</label>
       <input id="p_price" type="number" /> <br /><br /><br />
-      <input  class="form__inp__submit" type="submit" value="Add products" />
+      <input class="form__inp__submit" type="button" onclick="create()" value="Add products" />
     </form>
     <!-- display error in this para -->
     <p id="message"></p>
     <div>
       <!-- table -->
       <table id="table">
-        
-          <tr>
-            <!-- table head -->
-            <th>Product id</th>
-            <th>Product name</th>
-            <th>Product price</th>
-          </tr>
-        
+        <tr>
+          <!-- table head -->
+          <th>Product id</th>
+          <th>Product name</th>
+          <th>Product price</th>
+        </tr>
       </table>
     </div>
   </body>

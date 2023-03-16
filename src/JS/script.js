@@ -1,6 +1,8 @@
 let arr=[];
 function create(){
+    
     let message="";
+    document.getElementById("message").innerHTML=message;
     let id=document.getElementById("p_id").value;
     let name=document.getElementById("p_name").value;
     let price=document.getElementById("p_price").value;
@@ -10,20 +12,30 @@ function create(){
     if(id==""||name=="" ||price=="")
     {
         message="please fill all input fields";
+        
     }
     // if id or price is negative
     else if(id<0 ||price<0)
     {
         message="Please enter valid input";
+        
     }
     // name validation 
     else if(!(name.match(correct)))
     {
           message="Special Characters are not allowed";
+          
     }
-    // if message is blank it means no error
-    if(message=="")
+    // if message is not blank it means no error
+    if(message!="")
     {
+        
+        document.getElementById("message").innerHTML=message;
+        document.getElementById("message").style.color="red";
+        throw exit;
+    }
+    // if  no error
+    else{
         const table=document.getElementById("table");
         const row=document.createElement("tr");
         const data1=document.createElement("td");
@@ -36,11 +48,6 @@ function create(){
         row.append(data2);
         row.append(data3);
         table.append(row);
-    }
-    // if error
-    else{
-        document.getElementById("message").innerHTML=message;
-        document.getElementById("message").style.color="red";
     }
     
     
